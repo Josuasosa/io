@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" type="image/png" href="icono/icono.png">
+    <title>LOS VENGADORES</title>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/metro-bootstrap.css">
+        <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        body {
+            font-family: "Georgia", serif;
+            background-color: #fdf6e3;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #0047AB;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+           
+
+        .titulo-container {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin: 10px; 
+        }
+
+        h1 {
+            
+            font-size: 80px;
+            margin: 0;
+        }
+
+        .frase {
+            font-size: 30px;
+            font-style: italic;
+            margin-top: 5px; 
+            color: #FFC72C;
+        }
+
+        .imagenavengers{
+            height: 150px;
+            width: auto;
+            margin-left: auto;
+        }
+
+        header img {
+            height: 200px;
+            width: auto;
+            margin-right: 20px;
+        }
+
+        nav {
+            background-color: #b3193a;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #FFC72C;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+         
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            gap: 20px;
+        }
+        
+        
+
+        .left-section {
+            flex: 4;
+            background-color: white;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .right-section {
+            flex: 2;
+            background-color: white;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #b3193a;
+        }
+
+         img {
+    max-width: 100%;
+    height: auto;
+}
+
+        .noticia {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-left: 5px solid #b3193a;
+            margin-top: 10px;
+            
+        }
+        .noticia img{
+            height: 100px;
+            width: auto;
+            padding: 10px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #222222;
+            color: white;
+            padding: 15px;
+            font-style: italic;
+        }
+
+        footer img{
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagen/icono.png" alt="Logo">
+        <div class="titulo-container">
+            <h1>Los Vengadores</h1>
+            <p class="frase">"Vengadores, reúnanse".</p>
+        </div>
+        <div class="contador-container">
+        <p class="mensaje"> ¡Falta poco para la pelicula!</p>
+        <div id="cuenta-regresiva"></div>
+    </div>
+    </header>
+
+    <nav>
+        <a href="Index.html">Inicio</a>
+        <a href="personajes.html">Personajes</a>
+        <a href="cronologia.html">Cronología</a>
+        <a href="villanos.html">Villanos</a>
+        <a href="iconico.html">Iconicos</a>
+        <a href="eastereggs.html">Easter Eggs</a>
+    </nav>
+
+    <div class="container">
+        <div class="left-section">
+            <h2>Sinopsis</h2>
+            <p>
+                Los Vengadores son un equipo de superhéroes reunidos con un solo propósito: proteger la Tierra de amenazas que ningún héroe podría enfrentar por sí solo. Bajo el liderazgo de figuras icónicas como Iron Man, Capitán América, Thor y Hulk, el grupo ha evolucionado con el tiempo, incorporando nuevos integrantes y enfrentándose a enemigos cada vez más poderosos.
+
+Desde su formación, Los Vengadores han combatido a villanos que han puesto en peligro el planeta, desde el dios de la mentira Loki hasta la inteligencia artificial Ultron, sin olvidar al devastador Titán Loco, Thanos. A medida que sus batallas se intensifican, el equipo se enfrenta no solo a desafíos físicos, sino también a conflictos internos, cuestionando sus ideales, su papel como protectores y el precio de la heroica responsabilidad.
+
+Con el paso de los años, Los Vengadores han expandido sus filas con héroes como Spider-Man, Doctor Strange, Black Panther, Scarlet Witch y muchos más, formando una comunidad de poderosos guardianes. Juntos, han desafiado los límites del universo y han sido testigos de la destrucción, la redención y la esperanza.
+
+Lo que los hace extraordinarios no es solo su fuerza, sino su capacidad de luchar como una familia, sacrificándose por el bien común y demostrando que el verdadero heroísmo reside en la unión. Su legado continúa, inspirando nuevas generaciones de héroes y asegurando que el universo Marvel siga lleno de acción, misterio y emoción.
+            </p>
+            <center><video controls>
+                <source src="video/intro.mp4" type="video/mp4">
+            </video></center>
+        </div>
+
+        <div class="right-section">
+            <h2>Noticias</h2>
+            <div class="noticia">
+                <strong>AVENGERS: DOOMSDAY</strong>
+                <img src="imagen/adom.webp">
+                <br>
+                Avengers Doomsday fue anunciada para 18 de Diciembre de 2026, poco después del estreno de “The Kang Dynasty” y “Avengers: Secret Wars” (2027). Con ella, Marvel cierra el arco del Multiverso y honra la saga del infinito.
+            </div>
+            <div class="noticia">
+                <strong>THUNDERBOLTS/THE NEW AVENGERS</strong><br>
+                <center><img src="imagen/thunder.jpg" ></center>
+                <br>
+                Thunderbolts se estrenó el 2 de mayo de 2025, reuniendo a un grupo de antihéroes en una misión secreta que pronto se sale de control. Con un tono más oscuro, la película introduce a Sentry, un personaje con poder devastador. 
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Los Vengadores por Josua Sosa Dominguez | Todos los derechos reservados</p>
+        
+        <div>  
+            <a href="https://instagram.com/@jossusd"><img src="imagen/ig.png" title="Mi Instagram"></a> 
+            <a href="https://facebook.com/josua.sosa.56/"><img src="imagen/face.png" title="Mi Facebook"></a>  
+            <a href="https://tiktok.com/@jossusd"> <img src="imagen/tik-tok.png" title="Mi Tik Tok"></a>
+        </div>
+    
+        <p>Contacto: <a href="mailto:josuasosad@gmail.com">josuasosad@gmail.com</a></p>
+    </footer>
+    <script>
+    function iniciarCuentaRegresiva(fechaObjetivo) {
+        const cuentaRegresiva = document.getElementById("cuenta-regresiva");
+
+        function actualizarCuenta() {
+            const ahora = new Date().getTime();
+            const tiempoRestante = fechaObjetivo - ahora;
+
+            if (tiempoRestante <= 0) {
+                cuentaRegresiva.innerHTML = "¡El evento ha comenzado!";
+                return;
+            }
+
+            const dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((tiempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
+
+            cuentaRegresiva.innerHTML = `⏳ ${dias}d ${horas}h ${minutos}m ${segundos}s`;
+        }
+
+        setInterval(actualizarCuenta, 1000);
+        actualizarCuenta();
+    }
+
+    const fechaEvento = new Date("Dec 18, 2026 00:00:00").getTime(); 
+    iniciarCuentaRegresiva(fechaEvento);
+</script>
+
+</body>
+
+</html>
+
+

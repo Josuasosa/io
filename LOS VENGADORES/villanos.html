@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" type="image/png" href="icono/icono.png">
+    <title>LOS VENGADORES</title>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/metro-bootstrap.css">
+        <link rel="stylesheet" href="css/estilos.css">
+    <title>Los Vengadores</title>
+    <style>
+        body {
+            font-family: "Georgia", serif;
+            background-color: #fdf6e3;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #0047AB;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+           
+
+        .titulo-container {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin: 10px; 
+        }
+
+        h1 {
+            
+            font-size: 80px;
+            margin: 0;
+        }
+
+        .frase {
+            font-size: 30px;
+            font-style: italic;
+            margin-top: 5px; 
+            color: #FFC72C;
+        }
+
+        .imagenavengers{
+            height: 150px;
+            width: auto;
+            margin-left: auto;
+        }
+
+        header img {
+            height: 200px;
+            width: auto;
+            margin-right: 20px;
+        }
+
+        nav {
+            background-color: #b3193a;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #FFC72C;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .left-section {
+            flex: 2;
+            background-color: white;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .left-section ul {
+            list-style: none; 
+            padding: 0;
+        }
+
+        .left-section li {
+            background-color: #a82626;
+            color: white; 
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 10px; 
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .left-section a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        .left-section li:hover {
+            background-color: #d86767; 
+            color: #222;
+        }
+
+        .right-section {
+            flex: 4;
+            background-color: white;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #b3193a;
+        }
+
+        h3 {
+            color: #0047AB
+        }
+
+        .noticia {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-left: 5px solid #b3193a;
+            margin-top: 10px;
+            
+        }
+        .noticia img{
+            height: 100px;
+            width: 200;
+            margin-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #222222;
+            color: white;
+            padding: 15px;
+            font-style: italic;
+        }
+
+        footer img{
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagen/icono.png" alt="Logo">
+        <div class="titulo-container">
+            <h1>Los Vengadores</h1>
+            <p class="frase">"Vengadores, reúnanse".</p>
+        </div>
+        <div class="contador-container">
+        <p class="mensaje"> ¡Falta poco para la pelicula!</p>
+        <div id="cuenta-regresiva"></div>
+    </div>
+    </header>
+
+    <nav>
+        <a href="Index.html">Inicio</a>
+        <a href="personajes.html">Personajes</a>
+        <a href="cronologia.html">Cronología</a>
+        <a href="villanos.html">Villanos</a>
+        <a href="iconico.html">Iconicos</a>
+        <a href="eastereggs.html">Easter Eggs</a>
+    </nav>
+
+    <div class="container">
+    <div class="left-section">
+        <h2>Villanos</h2>
+        <ul>
+            <li><a href="javascript:void(0);" onclick="cambiarVillano(event, 'loki')">Loki</a></li>
+            <li><a href="javascript:void(0);" onclick="cambiarVillano(event, 'ultron')">Ultron</a></li>
+            <li><a href="javascript:void(0);" onclick="cambiarVillano(event, 'thanos')">Thanos</a></li>
+            <li><a href="javascript:void(0);" onclick="cambiarVillano(event, 'hela')">Hela</a></li>
+            <li><a href="javascript:void(0);" onclick="cambiarVillano(event, 'doctorDoom')">Doctor Doom</a></li>
+            <li><a href="javascript:void(0);" onclick="cambiarVillano(event, 'duendeverde')">Duende Verde</a></li>
+        </ul>
+    </div>
+
+    <div class="center-section">
+        <img id="villanoImagen" src="villanos/default.png" alt="Villano seleccionado" style="width: 500px; height: auto;">
+    </div>
+
+    <div class="right-section">
+        <h2 id="tituloVillano">Descripción</h2>
+        <p id="villanoDescripcion">Selecciona un villano para ver la información.</p>
+        <h3>Películas</h3>
+        <p id="listaPeliculasVillanos">Selecciona un villano para ver la información.</p>
+        <ul id="listaPeliculasVillanos"></ul>
+    </div>
+</div>
+    <footer>
+        <p>&copy; 2025 Los Vengadores por Josua Sosa Dominguez | Todos los derechos reservados</p>
+        
+        <div>  
+            <a href="https://instagram.com/@jossusd"><img src="imagen/ig.png" title="Mi Instagram"></a> 
+            <a href="https://facebook.com/josua.sosa.56/"><img src="imagen/face.png" title="Mi Facebook"></a>  
+            <a href="https://tiktok.com/@jossusd"> <img src="imagen/tik-tok.png" title="Mi Tik Tok"></a>
+        </div>
+    
+        <p>Contacto: <a href="mailto:josuasosad@gmail.com">josuasosad@gmail.com</a></p>
+    </footer>
+
+    <script>
+    function cambiarVillano(event, villano) {
+        event.preventDefault(); 
+
+        const villanos = {
+            "loki": {
+                nombre: "Loki",
+                imagen: "villanos/loki.png",
+                descripcion: "Loki, el Dios de las mentiras, es un personaje ambiguo que oscila entre el heroísmo y la traición. Su deseo de poder lo lleva a desafiar a Thor y conquistar la Tierra con la ayuda de los Chitauri.",
+                peliculas: ["Thor (2011)", "Los Vengadores (2012)", "Thor: Un mundo oscuro (2013)", "Thor: Ragnarok (2017)", "Loki (serie, 2021)"]
+            },
+            "ultron": {
+                nombre: "Ultron",
+                imagen: "villanos/ultron.png",
+                descripcion: "Ultron es una inteligencia artificial creada por Tony Stark y Bruce Banner. Su programación se corrompe, llevándolo a ver a la humanidad como una amenaza que debe ser erradicada.",
+                peliculas: ["Vengadores: La era de Ultrón (2015)"]
+            },
+            "thanos": {
+                nombre: "Thanos",
+                imagen: "villanos/thanos.png",
+                descripcion: "Thanos, el Titán Loco, busca el equilibrio en el universo mediante la eliminación de la mitad de la población. Su obsesión con las Gemas del Infinito lo convierte en el mayor enemigo de los Vengadores.",
+                peliculas: ["Guardianes de la Galaxia (2014)", "Vengadores: Infinity War (2018)", "Vengadores: Endgame (2019)"]
+            },
+            "hela": {
+                nombre: "Hela",
+                imagen: "villanos/hela.png",
+                descripcion: "Hela, la diosa de la muerte, es la hija primogénita de Odín y una guerrera despiadada. Busca reclamar el trono de Asgard y destruir todo lo que se oponga a su reinado.",
+                peliculas: ["Thor: Ragnarok (2017)"]
+            },
+            "doctorDoom": {
+                nombre: "Doctor Doom",
+                imagen: "villanos/drdoom.png",
+                descripcion: "Victor Von Doom es el gobernante de Latveria y uno de los villanos más poderosos de Marvel. Combinando su intelecto superior con habilidades mágicas, Doom ha intentado conquistar el mundo en múltiples ocasiones. Su odio hacia los Cuatro Fantásticos, especialmente Reed Richards, lo ha llevado a desarrollar tecnología avanzada y estrategias de manipulación para alcanzar sus objetivos.",
+                peliculas: ["Los Cuatro Fantásticos (2005)", "Los Cuatro Fantásticos y Silver Surfer (2007)", "Los Cuatro Fantásticos (2015)", "Avengers: Doomsday (2026)"]
+            },
+            "duendeverde": {
+                nombre: "Duende Verde",
+                imagen: "villanos/duendeverde.png",
+                descripcion: "Norman Osborn, el Duende Verde, es el enemigo icónico de Spider-Man. Su locura y su tecnología avanzada lo hacen un villano impredecible y peligroso.",
+                peliculas: ["Spider-Man (2002)", "Spider-Man: No Way Home (2021)"]
+            }
+        };
+
+        if (villanos[villano]) {
+            document.getElementById("villanoImagen").src = villanos[villano].imagen;
+            document.getElementById("tituloVillano").innerText = villanos[villano].nombre;
+            document.getElementById("villanoDescripcion").innerText = villanos[villano].descripcion;
+            
+            let peliculasLista = document.getElementById("listaPeliculasVillanos");
+            peliculasLista.innerHTML = ""; 
+            
+            villanos[villano].peliculas.forEach(pelicula => {
+                let item = document.createElement("li");
+                item.innerText = pelicula;
+                peliculasLista.appendChild(item);
+            });
+        } else {
+            console.log("Villano no encontrado:", villano);
+        }
+    }
+
+    function iniciarCuentaRegresiva(fechaObjetivo) {
+        const cuentaRegresiva = document.getElementById("cuenta-regresiva");
+
+        function actualizarCuenta() {
+            const ahora = new Date().getTime();
+            const tiempoRestante = fechaObjetivo - ahora;
+
+            if (tiempoRestante <= 0) {
+                cuentaRegresiva.innerHTML = "¡El evento ha comenzado!";
+                return;
+            }
+
+            const dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((tiempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
+
+            cuentaRegresiva.innerHTML = `⏳ ${dias}d ${horas}h ${minutos}m ${segundos}s`;
+        }
+
+        setInterval(actualizarCuenta, 1000);
+        actualizarCuenta();
+    }
+
+    const fechaEvento = new Date("Dec 18, 2026 00:00:00").getTime(); 
+    iniciarCuentaRegresiva(fechaEvento);
+</script>
+
+    
+</body>
+
+</html>
